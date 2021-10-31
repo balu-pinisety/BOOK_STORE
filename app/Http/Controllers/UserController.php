@@ -153,10 +153,8 @@ class UserController extends Controller
     }
 
     /**
-     * Get the token array structure.
-     *
+     * Get the token array structure
      * @param  string $token
-     *
      * @return \Illuminate\Http\JsonResponse
     */
     protected function createNewToken($token)

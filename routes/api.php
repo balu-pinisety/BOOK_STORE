@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ForgotPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,8 @@ Route::group([
     Route::post('login', [UserController::class, 'login']);
     Route::post('logout', [UserController::class, 'logout']);
     Route::get('refresh', [UserController::class, 'refresh']);
-    Route::get('userProfile', [UserController::class, 'userProfile']);    
+    Route::get('userProfile', [UserController::class, 'userProfile']);
+
+    Route::post('forgotpassword', [ForgotPasswordController::class, 'forgotPassword']);
+    Route::post('resetpassword', [ForgotPasswordController::class, 'resetPassword']);
 });
